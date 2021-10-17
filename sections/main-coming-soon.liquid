@@ -1,0 +1,60 @@
+{%assign desktop_image = section.settings.desktop_image | img_url: 'master'%}
+{%assign mobile_image = section.settings.mobile_image | img_url: 'master'%}
+
+<style>
+  .soon-image-container{
+    background-image: url('{{mobile_image}}');
+  }
+  @media only screen and (min-width: 578px) {
+    .soon-image-container{
+      background-image: url("{{desktop_image}}");
+    }
+  }
+</style>
+
+<div class="coming-soon-container">
+  <div class="soon-image-container">
+  </div>
+  <div class="soon-content-container">
+    <div class="soon-title" style="color: {{section.settings.product_category_color}};">
+      {{section.settings.product_category | upcase}}</div>
+    <div class="soon-text">COMING SOON</div>
+    <div class="soon-paragraph">{{section.settings.text}}</div>
+  </div>
+</div>
+
+{%schema%}
+{
+  "name": "Coming Soon Page",
+  "settings": [
+    {
+      "label": "Product Category",
+      "id": "product_category",
+      "type": "text",
+      "default": "purses test"
+    },
+    {
+      "label": "Product Category Color",
+      "id": "product_category_color",
+      "type": "color",
+      "default": "#dc143c"
+    },
+    {
+      "label": "Text",
+      "id": "text",
+      "type": "textarea",
+      "default": "Hello friends! We are currently building our new purses category. Add your email address below to stay up-to-date with announcements and our launch proposals"
+    },
+    {
+      "label": "Desktop Image (portrait)",
+      "id": "desktop_image",
+      "type": "image_picker"
+    },
+    {
+      "label": "Mobile Image (landscape)",
+      "id": "mobile_image",
+      "type": "image_picker"
+    }
+  ]
+}
+{%endschema%}

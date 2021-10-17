@@ -2510,3 +2510,77 @@ details-disclosure>details {
 }
 
 /* endof customizationns collection carousel */
+/* ------- Coming soon page -------- */
+
+.coming-soon-container {
+  width: 98vw;
+  margin: 0 auto;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.soon-image-container {
+  width: 100%;
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.soon-content-container {
+  width: 100%;
+  /* height: 65%; */
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px;
+  background-color: #ffffff;
+  background-image: linear-gradient(315deg, #ffffff 0%, #e7eef5 74%);
+}
+
+.soon-content-container * {
+  margin-bottom: 15px;
+}
+
+.soon-title,
+.soon-text {
+  font-size: 4rem;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.soon-paragraph {
+  max-width: 520px;
+  margin-bottom: 30px;
+  line-height: 2;
+}
+
+@media only screen and (min-width: 578px) {
+  .coming-soon-container {
+    flex-direction: row-reverse;
+    justify-content: center;
+    height: 80vh;
+  }
+
+  .soon-image-container,
+  .soon-content-container {
+    height: 100%;
+  }
+
+  .soon-content-container {
+    text-align: left;
+    align-items: flex-start;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .coming-soon-container {
+    height: 90vh;
+  }
+}
+
+/* ------- end of Coming soon page -------- */
