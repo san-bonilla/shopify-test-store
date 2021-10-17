@@ -2543,14 +2543,15 @@ details-disclosure>details {
 }
 
 .soon-content-container * {
-  margin-bottom: 15px;
+  margin-bottom: 0px;
 }
+
 
 .soon-title,
 .soon-text {
-  font-size: 4rem;
-  letter-spacing: 2px;
-  font-weight: bold;
+  font-size: 5rem;
+  letter-spacing: 1px;
+  font-weight: 700;
 }
 
 .soon-paragraph {
