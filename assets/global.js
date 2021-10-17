@@ -723,3 +723,23 @@ class VariantRadios extends VariantSelects {
 }
 
 customElements.define('variant-radios', VariantRadios);
+
+// Collection carousel
+$(document).ready(function(){
+  $('.product-slider').slick({
+    infinite: false,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    prevArrow: '<button type="button" class="slick-prev" id="slick-prev-custom">Previous</button>',
+    nextArrow: '<button type="button" class="slick-next" id="slick-next-custom">Next</button>',
+    responsive: [
+      {
+        breakpoint: 570,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        }
+      }
+    ]
+  });
+});
