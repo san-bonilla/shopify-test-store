@@ -1,18 +1,24 @@
-<div class="hero-section-container">
+{%assign collection_image = section.settings.hero_overlay_collection.featured_image | img_url: 'master'%}
+<div class="hero-section-container" style="background-image: url('{{collection_image}}');">
   <div class="content-container">
     <p class="promo-date">{{section.settings.promo_date_text | upcase}}</p>
     <h2 class="promo-title">{{section.settings.promo_title_text | upcase}}</h2>
-    <p class="promo-details">{{section.settings.promo_details_text}}</p>
+    <p class="promo-details">{{section.settings.promo_details_text}} {{section.settings.hero_overlay_collection}}</p>
     <div class="promo-cta-container">
-      <a href="/collections/bracelets" class="btn promo-cta">SHOP NOW</a>
+      <a href="{{section.settings.hero_overlay_collection.url}}" class="btn promo-cta">SHOP NOW</a>
       <a href="/pages/promotion-conditions" class="btn promo-cta">INFO</a>
     </div>
   </div>
 </div>
 {%schema%}
 {
-  "name": "Hero Image & Text Overlay",
+  "name": "Collection Promo",
   "settings": [
+    {
+    "type": "collection",
+    "id": "hero_overlay_collection",
+    "label": "Collection promo"
+    },
     {
       "id": "promo_date_text",
       "label": "Text",
@@ -29,7 +35,7 @@
       "id": "promo_details_text",
       "label": "Details",
       "type": "text",
-      "default": "20% discount on all bracelets"
+      "default": "20% discount on all"
     }
   ],
   "presets": [{

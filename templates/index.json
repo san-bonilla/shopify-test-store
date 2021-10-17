@@ -53,25 +53,26 @@
         "show_rating": false
       }
     },
-    "16343258841a964a09": {
-      "type": "hero-image-overlay",
-      "settings": {
-        "promo_date_text": "Only until thursday",
-        "promo_title_text": "nice & stylish",
-        "promo_details_text": "20% discount on all bracelets"
-      }
-    },
     "1634415278dcfea776": {
       "type": "collection-carousel",
       "settings": {
-        "carousel_collection": "earrings"
+        "carousel_collection": "indoor"
+      }
+    },
+    "16343258841a964a09": {
+      "type": "hero-image-overlay",
+      "settings": {
+        "hero_overlay_collection": "bracelets",
+        "promo_date_text": "Only until thursday",
+        "promo_title_text": "nice & stylish",
+        "promo_details_text": "20% discount on all"
       }
     }
   },
   "order": [
     "image_banner",
     "featured_products",
-    "16343258841a964a09",
-    "1634415278dcfea776"
+    "1634415278dcfea776",
+    "16343258841a964a09"
   ]
 }
